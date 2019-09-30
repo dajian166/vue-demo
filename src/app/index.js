@@ -6,7 +6,14 @@ var dataSource = {
     imgWidth: '80%',
     buttonClass: 'ui button',
     colorClass: 'violet',
-    isLoading: false
+    isLoading: false,
+    items: [{
+        text: 'HTML5'
+    }, {
+        text: 'CSS3'
+    }, {
+        text: 'JavaScript'
+    }]
 }
 
 var vm = new Vue({
