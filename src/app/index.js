@@ -4,7 +4,13 @@ var dataSource = {
 
 var vm = new Vue({
     el: '#app',
-    data: dataSource
+    data: dataSource,
+    beforeDestroy() {
+        console.log('要销毁了...');
+    },
+    destroyed() {
+        console.log('bye bye ~');
+    }
 });
 
 vm.$watch('message', function (newValue, oldValue) {
