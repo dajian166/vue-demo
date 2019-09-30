@@ -1,5 +1,6 @@
 var dataSource = {
     message: 'hello',
+    message1: '<h3>hello</h3>',
     loggedIn: false,
     imgSrc: "../../assets/images/elephant.jpg",
     imgWidth: '80%',

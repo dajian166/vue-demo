@@ -19,6 +19,8 @@
 
         {{ loggedIn?message:'请先登录'}}
         <p v-once>{{message}}</p>
+        <p v-text="message1"></p>
+        <p v-html="message1"></p>
         <img v-bind:src="imgSrc" :style="{width:imgWidth}">
     </div>
 
