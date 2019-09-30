@@ -2,7 +2,10 @@ var dataSource = {
     message: 'hello',
     loggedIn: false,
     imgSrc: "../../assets/images/elephant.jpg",
-    imgWidth: '80%'
+    imgWidth: '80%',
+    buttonClass: 'ui button',
+    colorClass: 'violet',
+    isLoading: false
 }
 
 var vm = new Vue({
