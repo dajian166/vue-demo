@@ -10,29 +10,7 @@
 </head>
 
 <body>
-    <div id="app">
-        <div v-if="condition" v-bind:title="title">
-            {{message}}
-        </div>
-        <div v-show="condition">
-            {{condition}}
-        </div>
-        <input type="text" v-model="message">
-        <button v-on:click="handleLogmessage">打印日志</button>
-        <ol>
-            <li v-for="(comment, index) in comments" :key="index">
-                {{index}}~{{comment.content}}
-            </li>
-        </ol>
-
-        <ul>
-            <comment 
-                v-for="(comment, index) in comments" :key="index" 
-                v-bind:comment="comment" 
-                v-bind:index="index">
-            </comment>
-        </ul>
-    </div>
+    <div id="app"></div>
     <script src="../src/app/index.js"></script>
 </body>
 
