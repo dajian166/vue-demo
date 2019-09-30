@@ -11,7 +11,8 @@
 
 <body>
     <div id="app">
-        {{message}}
+        {{ loggedIn?message:'请先登录'}}
+        <p v-once>{{message}}</p>
     </div>
     <script src="../src/app/index.js"></script>
 </body>
