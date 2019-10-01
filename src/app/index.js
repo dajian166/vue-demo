@@ -31,10 +31,18 @@ const dataSource = {
 
 const routes = [{
     path: '/',
-    component: Home
+    component: Home,
+    name: 'home'
+}, {
+    path: '/home',
+    redirect: {
+        name: 'home'
+    }
 }, {
     path: '/events',
-    component: Event
+    component: Event,
+    name: 'events',
+    alias: '/event'
 }, {
     path: '/events/:id',
     component: Event,
