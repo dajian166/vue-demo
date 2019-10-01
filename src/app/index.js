@@ -14,7 +14,8 @@ var dataSource = {
     }, {
         text: 'JavaScript'
     }],
-    counter: 0
+    counter: 0,
+    checkboxs: []
 }
 
 var vm = new Vue({
@@ -24,6 +25,9 @@ var vm = new Vue({
         handleClick(event) {
             console.log(event);
             this.counter += 1;
+        },
+        handleEnterKeyUp(event) {
+            console.log(event.target.value);
         }
     },
     beforeDestroy() {

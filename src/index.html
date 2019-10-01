@@ -12,6 +12,31 @@
 
 <body>
     <div id="app" class="ui container">
+        <div class="ui green inverted segment">
+            {{checkboxs}}
+        </div>
+        <div class="ui checkbox">
+            <input type="checkbox" value="hello" v-model="checkboxs" id="cb1">
+            <label for="cb1">hello</label>
+        </div>
+        <div class="ui checkbox">
+            <input type="checkbox" value="world" v-model="checkboxs" id="cb2">
+            <label for="cb2">world</label>
+        </div>
+        <div class="ui checkbox">
+            <input type="checkbox" v-model="loggedIn" id="cb0">
+            <label for="cb0">{{loggedIn}}</label>
+        </div>
+        <hr>
+        <div class="ui green inverted segment">
+            {{message}}
+        </div>
+        <div class="ui input">
+            <!--语法糖-->
+            <input type="text" v-model="message">
+            <input type="text" v-bind:value="message" @input="message=$event.target.value">
+        </div>
+        <hr>
         <div class="ui input">
             <input type="text" v-on:keyup.enter="handleEnterKeyUp">
         </div>
