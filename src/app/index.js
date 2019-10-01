@@ -37,6 +37,12 @@ var incrementButton = {
     },
 }
 
+var segment = {
+    template: `<div class="ui stacked segment">
+                    <slot>:)</slot>
+            </div>`
+}
+
 /*全局定义组件*/
 Vue.component('ui-button-global', {
     template: `<button class="ui button">{{text}}</button>`,
@@ -54,7 +60,8 @@ var vm = new Vue({
     components: {
         'ui-button': uiButton,
         'ui-button1': uiButton1,
-        'increment-button': incrementButton
+        'increment-button': incrementButton,
+        'segment': segment
     },
     methods: {
         handleIncrement() {
