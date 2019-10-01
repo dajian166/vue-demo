@@ -13,9 +13,16 @@
 
 <body>
     <div id="app">
-        <router-link to="/">首页</router-link>
-        <router-link to="/events">活动</router-link>
-        <router-view></router-view>
+        <div class="ui container">
+            <div class="ui two item menu">
+                <router-link active-class="active" exact class="item" to="/">首页</router-link>
+                <router-link active-class="active" class="item" to="/events">活动</router-link>
+            </div>
+
+            <div class="ui piled segment">
+                <router-view></router-view>
+            </div>
+        </div>
     </div>
     <script src="../src/app/index.js"></script>
 </body>
