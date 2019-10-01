@@ -3,7 +3,12 @@ const Home = {
 }
 
 const Event = {
-    template: '<h2>活动</h2>'
+    props: ['id'],
+    template: '<h2>活动{{id}}</h2>',
+    beforeRouteUpdate(to, from, next) {
+        console.log(to, from);
+        next();
+    }
 }
 
 const dataSource = {
@@ -16,6 +21,10 @@ const routes = [{
 }, {
     path: '/events',
     component: Event
+}, {
+    path: '/events/:id',
+    component: Event,
+    props: true
 }]
 
 const router = new VueRouter({
