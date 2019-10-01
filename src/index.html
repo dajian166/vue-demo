@@ -13,6 +13,27 @@
 <body>
     <div id="app" class="ui container">
         <div class="ui green inverted segment">
+            {{selected}}
+        </div>
+        <select name="" id="" class="ui fluid dropdown" v-model="selected">
+            <option v-for="(option, index) in options" :key="index" :value="option.value">
+                {{option.value}}
+            </option>
+        </select>
+        <hr>
+        <div class="ui green inverted segment">
+            {{message}}
+        </div>
+        <div class="ui radio checkbox">
+            <input type="radio" value="hello" v-model="message" id="rb1">
+            <label for="rb1">hello</label>
+        </div>
+        <div class="ui radio checkbox">
+            <input type="radio" value="world" v-model="message" id="rb2">
+            <label for="rb2">world</label>
+        </div>
+        <hr>
+        <div class="ui green inverted segment">
             {{checkboxs}}
         </div>
         <div class="ui checkbox">

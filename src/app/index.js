@@ -15,7 +15,15 @@ var dataSource = {
         text: 'JavaScript'
     }],
     counter: 0,
-    checkboxs: []
+    checkboxs: [],
+    selected: '',
+    options: [{
+            value: 'hello'
+        },
+        {
+            value: 'world'
+        }
+    ]
 }
 
 var vm = new Vue({
