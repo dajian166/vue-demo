@@ -13,12 +13,19 @@ var dataSource = {
         text: 'CSS3'
     }, {
         text: 'JavaScript'
-    }]
+    }],
+    counter: 0
 }
 
 var vm = new Vue({
     el: '#app',
     data: dataSource,
+    methods: {
+        handleClick(event) {
+            console.log(event);
+            this.counter += 1;
+        }
+    },
     beforeDestroy() {
         console.log('要销毁了...');
     },

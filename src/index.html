@@ -12,6 +12,16 @@
 
 <body>
     <div id="app" class="ui container">
+        <button class="ui button" @click="handleClick">
+            加一
+        </button>
+        <button class="ui button" v-on:click="counter+=1">
+            加一
+        </button>
+        <div class="ui red circular label">
+            {{counter}}
+        </div>
+        <hr>
         <!--如果这个列表里面需要包含多个元素-->
         <template v-for="(item, index) in items">
             <div>
