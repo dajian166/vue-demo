@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "semantic-ui-css": "^2.4.1",
     "vue": "^2.6.10"
   }
 }
