@@ -8,10 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="../node_modules/semantic-ui-css/semantic.css">
     <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/vue-router/dist/vue-router.js"></script>
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <router-link to="/">首页</router-link>
+        <router-link to="/events">活动</router-link>
+        <router-view></router-view>
+    </div>
     <script src="../src/app/index.js"></script>
 </body>
 
