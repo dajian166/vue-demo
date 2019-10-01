@@ -43,6 +43,22 @@ var segment = {
             </div>`
 }
 
+var card = {
+    template: `<div class="ui card">
+    <div class="image">
+        <slot name="image">image</slot>
+    </div>
+    <div class="content">
+        <div class="header">
+            <slot name="header">header</slot>
+        </div>
+        <div class="meta">
+            <slot name="meta">meta</slot>
+        </div>
+    </div>
+</div>`
+}
+
 /*全局定义组件*/
 Vue.component('ui-button-global', {
     template: `<button class="ui button">{{text}}</button>`,
@@ -61,7 +77,8 @@ var vm = new Vue({
         'ui-button': uiButton,
         'ui-button1': uiButton1,
         'increment-button': incrementButton,
-        'segment': segment
+        'segment': segment,
+        'card': card
     },
     methods: {
         handleIncrement() {
