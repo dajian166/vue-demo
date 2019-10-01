@@ -18,6 +18,12 @@
             <ui-button1 text="edit"></ui-button1>
             <ui-button-global :text="published?'unpublish':'publish'"></ui-button-global>
             <ui-button-global text="全局定义的组件"></ui-button-global>
+            <hr>
+            <increment-button @increment="handleIncrement"></increment-button>
+            <increment-button @increment="handleIncrement"></increment-button>
+            <div class="ui red circular label">
+                {{total}}
+            </div>
         </div>
     </div>
     <script src="../src/app/index.js"></script>

@@ -22,6 +22,21 @@ var uiButton1 = {
     }
 }
 
+var incrementButton = {
+    template: `<button class="ui button" @click="increment">{{counter}}</button>`,
+    data() {
+        return {
+            counter: 0
+        }
+    },
+    methods: {
+        increment() {
+            this.counter += 1;
+            this.$emit('increment');
+        }
+    },
+}
+
 /*全局定义组件*/
 Vue.component('ui-button-global', {
     template: `<button class="ui button">{{text}}</button>`,
@@ -29,7 +44,8 @@ Vue.component('ui-button-global', {
 });
 
 var dataSource = {
-    published: false
+    published: false,
+    total: 0
 }
 
 var vm = new Vue({
@@ -37,6 +53,12 @@ var vm = new Vue({
     data: dataSource,
     components: {
         'ui-button': uiButton,
-        'ui-button1': uiButton1
-    }
+        'ui-button1': uiButton1,
+        'increment-button': incrementButton
+    },
+    methods: {
+        handleIncrement() {
+            this.total++;
+        }
+    },
 });
