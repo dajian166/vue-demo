@@ -11,7 +11,22 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div v-if="isShow" v-bind:title="title">
+            {{message}}
+        </div>
+        <p v-show="isShow">v-show使用display: none;</p>
+        <button v-on:click="logMessage">按钮</button>
+        <input type="text" name="" id="" v-model="message">
+        <ul>
+            <li v-for="comment in comments">
+                {{comment.content}}
+            </li>
+        </ul>
+        <ol>
+            <comment v-for="item in comments" v-bind:comment="item"></comment>
+        </ol>
+    </div>
     <script src="../src/app/index.js"></script>
 </body>
 
