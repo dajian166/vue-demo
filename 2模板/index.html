@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/semantic-ui-css/semantic.css">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <p v-once>{{message}}</p>
+        <p>{{loggedIn?message:'请先登录'}}</p>
+        <img v-bind:src="imgSrc" :style="{width:imgWidth}" alt="">
+        <div class="ui container">
+            <div class="ui hidden divid"></div>
+            <button v-bind:class="[buttonClass,colorClass,{loading:isLoading}]">按钮</button>
+        </div>
+        <hr>
+        <p v-text="htmlText"></p>
+        <p v-html="htmlText"></p>
+    </div>
+    <script src="./index.js"></scriptv-once>
+</body>
+
+</html>
